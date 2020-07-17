@@ -19,7 +19,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var pointsSelector: UISegmentedControl!
     var winner = ""
     var defaults = UserDefaults.standard
-    var teamNames : [String] = ["La Flame","Rockers","Ball Busters","Double Shots","Double Ace","King Smashers"]
+//    var teamNames : [String] = ["La Flame","Rockers","Ball Busters","Double Shots","Double Ace","King Smashers"]
+    var teamNames = [String]()
+    var teamDictionary = Dictionary<String,Int>()
     
     
     var team1Name = ""
@@ -33,6 +35,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        retrieveTeamData()
+        print(teamNames,teamDictionary)
         team1picker.tag = 1
         team2picker.tag = 2
         updateScore()
@@ -59,11 +63,11 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1{
             team1Name = teamNames[row]
-            print("Team 1: ")
+            print("Team 1: \(team1Name)")
         }
-        else if pickerView.tag == 1{
+        else if pickerView.tag == 2{
             team2Name = teamNames[row]
-            print("Team 2: ")
+            print("Team 2: \(team2Name)")
         }
        
     }
@@ -143,6 +147,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     // MARK:- Update points table
     func updatePointsTable(){
+        teamDictionary[winner]! += 3
+        defaults.set(teamDictionary, forKey: "teamDictionary")
+        print(teamDictionary)
         
         
         
@@ -159,6 +166,12 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         winner = ""
         updateScore()
         
+    }
+    
+    // MARK:- Retrieve team data
+    func retrieveTeamData(){
+        teamDictionary = defaults.value(forKey: "teamDictionary") as! Dictionary<String,Int>
+        teamNames = defaults.value(forKey: "teamNames") as! [String]
     }
     
     

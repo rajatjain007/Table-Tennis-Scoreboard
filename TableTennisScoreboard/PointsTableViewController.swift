@@ -12,17 +12,23 @@ class PointsTableViewController: UITableViewController {
     
     
     var defaults = UserDefaults.standard
-    var teamNames = [String]()
+    
     var teamDictionary = Dictionary<String,Int>()
+    var teamNames = [String]()
+    
+    
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh notices.")
+        self.tableView.reloadData()
+        retrieveTeamData()
         print(teamNames)
-        print(defaults.value(forKey: "teamDictionary"))
-        print(defaults.value(forKey: "teamNames") as! [String])
+        print(teamDictionary)
         
         self.tableView.reloadData()
         
@@ -39,7 +45,8 @@ class PointsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teamCell")
         let teamN = defaults.value(forKey: "teamNames") as! [String]
         let team = teamN[indexPath.row] ?? "No teams added"
-        cell?.textLabel?.text = team
+        let points = teamDictionary[team]
+        cell?.textLabel?.text = team + " : " +  "\(points ?? 0) " + " points."
        
         return cell!
         
@@ -80,6 +87,25 @@ class PointsTableViewController: UITableViewController {
         present(alert,animated: true,completion: nil)
         
     }
+    
+    func retrieveTeamData(){
+        teamNames = defaults.value(forKey: "teamNames") as! [String]
+        teamDictionary = defaults.value(forKey: "teamDictionary") as! Dictionary<String,Int>
+        
+    }
+    
+    @IBAction func refreshPointsTable(_ sender: UIBarButtonItem) {
+        retrieveTeamData()
+        self.tableView.reloadData()
+    }
+    
+    @IBAction func deleteTournaments(_ sender: UIBarButtonItem) {
+        
+    }
+    
+    
+    
+    
     
     
     

@@ -176,6 +176,16 @@
                                     <action selector="addNewTeam:" destination="Fnz-Xa-Nq2" id="RE1-Uo-rOy"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem image="arrow.clockwise" catalog="system" landscapeImage="arrow.clockwise" id="txu-c4-utK">
+                                <connections>
+                                    <action selector="refreshPointsTable:" destination="Fnz-Xa-Nq2" id="KKV-nD-DfG"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="trash.fill" catalog="system" landscapeImage="trash.fill" id="3zU-Bt-54Z">
+                                <connections>
+                                    <action selector="deleteTournaments:" destination="Fnz-Xa-Nq2" id="ey8-5G-Y1r"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem image="sportscourt.fill" catalog="system" landscapeImage="play.fill" id="s4V-kU-DyS">
                                 <connections>
                                     <action selector="startLeague:" destination="Fnz-Xa-Nq2" id="hEo-61-3PD"/>
@@ -209,10 +219,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="list.number" catalog="system" width="128" height="97"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="sportscourt.fill" catalog="system" width="128" height="83"/>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>
