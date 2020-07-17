@@ -19,11 +19,14 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var pointsSelector: UISegmentedControl!
     var winner = ""
     var defaults = UserDefaults.standard
-    var teamNames = [String]()
+    var teamNames : [String] = ["La Flame","Rockers","Ball Busters","Double Shots","Double Ace","King Smashers"]
+    
+    
     var team1Name = ""
     var team2Name = ""
     
-//    var teamNames = defaults.value(forKey: "teamNames") as! [String]
+    
+
     
     
     
@@ -33,6 +36,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         team1picker.tag = 1
         team2picker.tag = 2
         updateScore()
+        
         
         
         
@@ -70,7 +74,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         updateScore()
     }
     @IBAction func team1Minus(_ sender: UIButton) {
-        team2Score -= 1
+        team1Score -= 1
         updateScore()
     }
     @IBAction func team2Plus(_ sender: UIButton) {
@@ -139,6 +143,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     // MARK:- Update points table
     func updatePointsTable(){
+        
+        
         
     }
     
