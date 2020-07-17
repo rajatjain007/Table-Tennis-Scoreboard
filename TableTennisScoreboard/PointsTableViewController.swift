@@ -67,13 +67,7 @@ class PointsTableViewController: UITableViewController {
             self.defaults.set(self.teamNames, forKey: "teamNames")
             self.defaults.set(self.teamDictionary, forKey: "teamDictionary")
             self.tableView.reloadData()
-            
-            
-            
-            
-            
-            
-            
+          
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addTextField{(alertTextField) in
@@ -100,19 +94,23 @@ class PointsTableViewController: UITableViewController {
     }
     
     @IBAction func deleteTournaments(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Delete points table", message: "", preferredStyle: .alert)
+        
+        
+        let action = UIAlertAction(title: "Delete", style: .default) { (action) in
+            self.teamDictionary.removeAll()
+            self.teamNames.removeAll()
+            print(self.teamDictionary,self.teamNames)
+            self.defaults.set(self.teamNames, forKey: "teamNames")
+            self.defaults.set(self.teamDictionary, forKey: "teamDictionary")
+          
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(action)
+        alert.addAction(cancel)
+        present(alert,animated: true,completion: nil)
+        
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
- 
-    
-    
-    
+   
 }

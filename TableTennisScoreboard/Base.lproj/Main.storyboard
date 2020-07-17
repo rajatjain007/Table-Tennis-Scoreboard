@@ -131,9 +131,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="TableTennis Scoreboard" id="1eE-VX-5Jr">
-                        <barButtonItem key="rightBarButtonItem" image="list.number" catalog="system" landscapeImage="list.number" id="LM4-cz-uyK"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="TableTennis Scoreboard" id="1eE-VX-5Jr"/>
                     <connections>
                         <outlet property="pointsSelector" destination="LJn-hn-9Sx" id="zud-Si-4HR"/>
                         <outlet property="team1ScoreLabel" destination="7Gv-1q-V28" id="tlb-a1-2NL"/>
@@ -220,7 +218,6 @@
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
-        <image name="list.number" catalog="system" width="128" height="97"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
