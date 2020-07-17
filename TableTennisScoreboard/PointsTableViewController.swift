@@ -10,31 +10,24 @@ import UIKit
 
 class PointsTableViewController: UITableViewController {
     
-    
     var defaults = UserDefaults.standard
     
     var teamDictionary = Dictionary<String,Int>()
     var teamNames = [String]()
     
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        retrieveTeamData()
         tableView.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh notices.")
         self.tableView.reloadData()
-        retrieveTeamData()
+       
         print(teamNames)
         print(teamDictionary)
         
         self.tableView.reloadData()
         
-        
-        
     }
+    
     
     // MARK:- TableView functions
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,7 +40,7 @@ class PointsTableViewController: UITableViewController {
         let team = teamN[indexPath.row] ?? "No teams added"
         let points = teamDictionary[team]
         cell?.textLabel?.text = team + " : " +  "\(points ?? 0) " + " points."
-       
+        
         return cell!
         
     }
@@ -64,10 +57,11 @@ class PointsTableViewController: UITableViewController {
         let action = UIAlertAction(title: "Add team", style: .default) { (action) in
             self.teamNames.append(textField.text!)
             self.teamDictionary[textField.text!] = 0
+            self.teamDictionary[textField.text!] = 0
             self.defaults.set(self.teamNames, forKey: "teamNames")
             self.defaults.set(self.teamDictionary, forKey: "teamDictionary")
             self.tableView.reloadData()
-          
+            
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addTextField{(alertTextField) in
@@ -83,8 +77,9 @@ class PointsTableViewController: UITableViewController {
     }
     
     func retrieveTeamData(){
-        teamNames = defaults.value(forKey: "teamNames") as! [String]
-        teamDictionary = defaults.value(forKey: "teamDictionary") as! Dictionary<String,Int>
+        
+        teamNames = defaults.value(forKey: "teamNames") as? [String] ?? []
+        teamDictionary = defaults.value(forKey: "teamDictionary") as? Dictionary<String,Int> ?? [:]
         
     }
     
@@ -103,7 +98,7 @@ class PointsTableViewController: UITableViewController {
             print(self.teamDictionary,self.teamNames)
             self.defaults.set(self.teamNames, forKey: "teamNames")
             self.defaults.set(self.teamDictionary, forKey: "teamDictionary")
-          
+            
         }
         let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(action)
@@ -112,5 +107,5 @@ class PointsTableViewController: UITableViewController {
         
         
     }
-   
+    
 }

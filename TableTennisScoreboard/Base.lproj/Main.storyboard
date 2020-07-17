@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebT-p0-xdu">
-    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,21 +15,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="J1W-ad-Jo9">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="J1W-ad-Jo9">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uC8-cN-p3j">
-                                        <rect key="frame" x="0.0" y="36.5" width="343.5" height="341"/>
+                                        <rect key="frame" x="0.0" y="36.666666666666657" width="320.66666666666669" height="341"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvQ-vu-bKW">
-                                                <rect key="frame" x="11.5" y="0.0" width="320" height="162"/>
+                                                <rect key="frame" x="0.33333333333334281" y="0.0" width="320" height="162"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="MhP-8S-eFi"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4au-wt-X8o"/>
                                                 </connections>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nt-m2-kKE">
-                                                <rect key="frame" x="162.5" y="177" width="18" height="22"/>
+                                                <rect key="frame" x="151.33333333333334" y="177" width="18" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="wRp-eL-thY"/>
                                                 </constraints>
@@ -39,7 +39,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gv-1q-V28">
-                                                <rect key="frame" x="74" y="214" width="195.5" height="90"/>
+                                                <rect key="frame" x="73.999999999999986" y="214" width="172.66666666666663" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="VTd-Lw-BU8"/>
                                                 </constraints>
@@ -48,7 +48,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6a-h2-xvK">
-                                                <rect key="frame" x="162.5" y="319" width="18" height="22"/>
+                                                <rect key="frame" x="151.33333333333334" y="319" width="18" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="vTQ-bM-rOk"/>
                                                 </constraints>
@@ -62,19 +62,19 @@
                                             <constraint firstItem="7Gv-1q-V28" firstAttribute="leading" secondItem="uC8-cN-p3j" secondAttribute="leading" constant="74" id="Hd9-oD-Eru"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-Kc-Um7">
-                                        <rect key="frame" x="402.5" y="146" width="83.5" height="122"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-Kc-Um7">
+                                        <rect key="frame" x="379.66666666666669" y="150.66666666666666" width="67" height="112.99999999999997"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LJn-hn-9Sx">
-                                                <rect key="frame" x="0.0" y="0.0" width="83.5" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="32"/>
                                                 <segments>
                                                     <segment title="11"/>
                                                     <segment title="21"/>
                                                 </segments>
                                             </segmentedControl>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEN-lP-PrT">
-                                                <rect key="frame" x="0.0" y="91" width="83.5" height="31"/>
-                                                <state key="normal" title="End match."/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEN-lP-PrT">
+                                                <rect key="frame" x="0.0" y="91" width="67" height="22"/>
+                                                <state key="normal" image="stop.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="endMatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXp-A3-93P"/>
                                                 </connections>
@@ -85,30 +85,30 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="23P-7W-rYy">
-                                        <rect key="frame" x="545" y="36.5" width="351" height="341"/>
+                                        <rect key="frame" x="505.66666666666674" y="36.666666666666657" width="390.33333333333326" height="340.66666666666674"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRS-u0-Dyf">
-                                                <rect key="frame" x="15.5" y="0.0" width="320" height="162"/>
+                                                <rect key="frame" x="35.333333333333314" y="0.0" width="320" height="162"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="kTg-he-mJr"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Dao-o6-AIS"/>
                                                 </connections>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PT-Zl-Acc">
-                                                <rect key="frame" x="166.5" y="177" width="18" height="22"/>
+                                                <rect key="frame" x="186.33333333333331" y="177" width="18" height="22"/>
                                                 <state key="normal" image="plus" catalog="system"/>
                                                 <connections>
                                                     <action selector="team2Plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQa-EC-Dmn"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b4-yH-jtK">
-                                                <rect key="frame" x="89" y="214" width="172.5" height="90"/>
+                                                <rect key="frame" x="108.99999999999993" y="213.99999999999997" width="172.66666666666663" height="89.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="75"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9h-kJ-kpK">
-                                                <rect key="frame" x="166.5" y="319" width="18" height="22"/>
+                                                <rect key="frame" x="186.33333333333331" y="318.66666666666663" width="18" height="22"/>
                                                 <state key="normal" image="minus" catalog="system"/>
                                                 <connections>
                                                     <action selector="team2Minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z8I-DI-1rw"/>
@@ -154,10 +154,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamCell" id="s71-Qf-8vq">
-                                <rect key="frame" x="0.0" y="28" width="896" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="896" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s71-Qf-8vq" id="5FC-8z-mje">
-                                    <rect key="frame" x="44" y="0.0" width="808" height="43.5"/>
+                                    <rect key="frame" x="44" y="0.0" width="808" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -184,7 +184,7 @@
                                     <action selector="deleteTournaments:" destination="Fnz-Xa-Nq2" id="ey8-5G-Y1r"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="sportscourt.fill" catalog="system" landscapeImage="play.fill" id="s4V-kU-DyS">
+                            <barButtonItem image="sportscourt.fill" catalog="system" landscapeImage="sportscourt.fill" id="s4V-kU-DyS">
                                 <connections>
                                     <action selector="startLeague:" destination="Fnz-Xa-Nq2" id="hEo-61-3PD"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="k1S-n5-Zhc"/>
@@ -219,9 +219,9 @@
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="minus" catalog="system" width="128" height="24"/>
-        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="sportscourt.fill" catalog="system" width="128" height="83"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
     </resources>
 </document>

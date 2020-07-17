@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
-
+    
     @IBOutlet weak var team1picker: UIPickerView!
     @IBOutlet weak var team2picker: UIPickerView!
     var team1Score = 0
@@ -19,19 +19,13 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     @IBOutlet weak var pointsSelector: UISegmentedControl!
     var winner = ""
     var defaults = UserDefaults.standard
-//    var teamNames : [String] = ["La Flame","Rockers","Ball Busters","Double Shots","Double Ace","King Smashers"]
+    //    var teamNames : [String] = ["La Flame","Rockers","Ball Busters","Double Shots","Double Ace","King Smashers"]
     var teamNames = [String]()
     var teamDictionary = Dictionary<String,Int>()
-    
-    
+   
     var team1Name = ""
     var team2Name = ""
-    
-    
-
-    
-    
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,11 +34,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
         team1picker.tag = 1
         team2picker.tag = 2
         updateScore()
-        
-        
-        
-        
-        
+      
     }
     // MARK:- Picker delegate methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -69,7 +59,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
             team2Name = teamNames[row]
             print("Team 2: \(team2Name)")
         }
-       
+        
     }
     
     //MARK:- Scoreboard functions
@@ -92,10 +82,10 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     // MARK:- Update scoreboard
-       func updateScore(){
-           team1ScoreLabel.text? = String(team1Score)
-           team2ScoreLabel.text? = String(team2Score)
-       }
+    func updateScore(){
+        team1ScoreLabel.text? = String(team1Score)
+        team2ScoreLabel.text? = String(team2Score)
+    }
     
     // MARK:- End match
     
@@ -148,6 +138,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     // MARK:- Update points table
     func updatePointsTable(){
         teamDictionary[winner]! += 3
+        
         defaults.set(teamDictionary, forKey: "teamDictionary")
         print(teamDictionary)
         
@@ -177,7 +168,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     
     
-
-
+    
+    
 }
 

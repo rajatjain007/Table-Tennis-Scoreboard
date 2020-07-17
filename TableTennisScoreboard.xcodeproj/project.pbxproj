@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1884AF3A24C228D800225DE8 /* TableTennisScoreboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TableTennisScoreboard.entitlements; sourceTree = "<group>"; };
 		18AA54B524C183B900478B61 /* TableTennisScoreboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableTennisScoreboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AA54B824C183B900478B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18AA54BA24C183B900478B61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		18AA54B724C183B900478B61 /* TableTennisScoreboard */ = {
 			isa = PBXGroup;
 			children = (
+				1884AF3A24C228D800225DE8 /* TableTennisScoreboard.entitlements */,
 				18AA54B824C183B900478B61 /* AppDelegate.swift */,
 				18AA54BA24C183B900478B61 /* SceneDelegate.swift */,
 				18AA54BC24C183B900478B61 /* ViewController.swift */,
@@ -288,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TableTennisScoreboard/TableTennisScoreboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H87B3E4KY3;
 				INFOPLIST_FILE = TableTennisScoreboard/Info.plist;
@@ -297,6 +300,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rajatjain.TableTennisScoreboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TableTennisScoreboard/TableTennisScoreboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H87B3E4KY3;
 				INFOPLIST_FILE = TableTennisScoreboard/Info.plist;
@@ -315,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = rajatjain.TableTennisScoreboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
