@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ebT-p0-xdu">
-    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,24 +12,24 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableTennisScoreboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="J1W-ad-Jo9">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="J1W-ad-Jo9">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uC8-cN-p3j">
-                                        <rect key="frame" x="0.0" y="36.666666666666657" width="320.66666666666669" height="341"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="112" translatesAutoresizingMaskIntoConstraints="NO" id="uC8-cN-p3j">
+                                        <rect key="frame" x="0.0" y="41" width="379.5" height="686"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvQ-vu-bKW">
-                                                <rect key="frame" x="0.33333333333334281" y="0.0" width="320" height="162"/>
+                                                <rect key="frame" x="30" y="0.0" width="320" height="216"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="MhP-8S-eFi"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4au-wt-X8o"/>
                                                 </connections>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nt-m2-kKE">
-                                                <rect key="frame" x="151.33333333333334" y="177" width="18" height="22"/>
+                                                <rect key="frame" x="181" y="328" width="18" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="wRp-eL-thY"/>
                                                 </constraints>
@@ -39,7 +39,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gv-1q-V28">
-                                                <rect key="frame" x="73.999999999999986" y="214" width="172.66666666666663" height="90"/>
+                                                <rect key="frame" x="103.5" y="462" width="172.5" height="90"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="90" id="VTd-Lw-BU8"/>
                                                 </constraints>
@@ -48,7 +48,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6a-h2-xvK">
-                                                <rect key="frame" x="151.33333333333334" y="319" width="18" height="22"/>
+                                                <rect key="frame" x="181" y="664" width="18" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="vTQ-bM-rOk"/>
                                                 </constraints>
@@ -58,23 +58,22 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="7Gv-1q-V28" firstAttribute="leading" secondItem="uC8-cN-p3j" secondAttribute="leading" constant="74" id="Hd9-oD-Eru"/>
-                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-Kc-Um7">
-                                        <rect key="frame" x="379.66666666666669" y="150.66666666666666" width="67" height="112.99999999999997"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-Kc-Um7">
+                                        <rect key="frame" x="438.5" y="328" width="125" height="112"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LJn-hn-9Sx">
-                                                <rect key="frame" x="0.0" y="0.0" width="67" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="32"/>
                                                 <segments>
                                                     <segment title="11"/>
                                                     <segment title="21"/>
                                                 </segments>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEN-lP-PrT">
-                                                <rect key="frame" x="0.0" y="91" width="67" height="22"/>
-                                                <state key="normal" image="stop.fill" catalog="system"/>
+                                                <rect key="frame" x="0.0" y="90" width="125" height="22"/>
+                                                <state key="normal" title="End match" image="stop.fill" catalog="system">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="endMatch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXp-A3-93P"/>
                                                 </connections>
@@ -84,31 +83,31 @@
                                             <constraint firstItem="MEN-lP-PrT" firstAttribute="leading" secondItem="sU2-Kc-Um7" secondAttribute="leading" id="myJ-0D-589"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="23P-7W-rYy">
-                                        <rect key="frame" x="505.66666666666674" y="36.666666666666657" width="390.33333333333326" height="340.66666666666674"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="117" translatesAutoresizingMaskIntoConstraints="NO" id="23P-7W-rYy">
+                                        <rect key="frame" x="622.5" y="33.5" width="401.5" height="701"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRS-u0-Dyf">
-                                                <rect key="frame" x="35.333333333333314" y="0.0" width="320" height="162"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="401.5" height="216"/>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="kTg-he-mJr"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Dao-o6-AIS"/>
                                                 </connections>
                                             </pickerView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PT-Zl-Acc">
-                                                <rect key="frame" x="186.33333333333331" y="177" width="18" height="22"/>
+                                                <rect key="frame" x="0.0" y="333" width="401.5" height="22"/>
                                                 <state key="normal" image="plus" catalog="system"/>
                                                 <connections>
                                                     <action selector="team2Plus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQa-EC-Dmn"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7b4-yH-jtK">
-                                                <rect key="frame" x="108.99999999999993" y="213.99999999999997" width="172.66666666666663" height="89.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="472" width="401.5" height="90"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="75"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9h-kJ-kpK">
-                                                <rect key="frame" x="186.33333333333331" y="318.66666666666663" width="18" height="22"/>
+                                                <rect key="frame" x="0.0" y="679" width="401.5" height="22"/>
                                                 <state key="normal" image="minus" catalog="system"/>
                                                 <connections>
                                                     <action selector="team2Minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z8I-DI-1rw"/>
@@ -117,16 +116,17 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="uC8-cN-p3j" firstAttribute="top" secondItem="J1W-ad-Jo9" secondAttribute="top" constant="36.5" id="cNJ-z9-2uz"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="J1W-ad-Jo9" secondAttribute="trailing" id="171-sS-CQ0"/>
                             <constraint firstItem="J1W-ad-Jo9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9um-a5-O4o"/>
+                            <constraint firstItem="J1W-ad-Jo9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CRH-Ca-ffg"/>
+                            <constraint firstItem="J1W-ad-Jo9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dsd-KQ-HA9"/>
                             <constraint firstAttribute="bottom" secondItem="J1W-ad-Jo9" secondAttribute="bottom" id="Juk-UZ-uON"/>
+                            <constraint firstAttribute="bottom" secondItem="J1W-ad-Jo9" secondAttribute="bottom" id="obF-2o-mzm"/>
+                            <constraint firstAttribute="trailing" secondItem="J1W-ad-Jo9" secondAttribute="trailing" id="pGa-BS-3yD"/>
                             <constraint firstItem="J1W-ad-Jo9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zAi-aF-6LD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -142,22 +142,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716.9642857142856" y="-868.11594202898561"/>
+            <point key="canvasLocation" x="1854.4921874999998" y="-972.65625"/>
         </scene>
         <!--Points Table-->
         <scene sceneID="TIy-kW-FEY">
             <objects>
                 <tableViewController id="Fnz-Xa-Nq2" customClass="PointsTableViewController" customModule="TableTennisScoreboard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EL9-su-dfr">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamCell" id="s71-Qf-8vq">
-                                <rect key="frame" x="0.0" y="28" width="896" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="28" width="1024" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="s71-Qf-8vq" id="5FC-8z-mje">
-                                    <rect key="frame" x="44" y="0.0" width="808" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -203,7 +203,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ebT-p0-xdu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rC7-AP-fUX">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

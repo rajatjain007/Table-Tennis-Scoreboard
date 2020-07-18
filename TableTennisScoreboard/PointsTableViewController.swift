@@ -76,6 +76,7 @@ class PointsTableViewController: UITableViewController {
         
     }
     
+    // MARK:- Retrieving team data
     func retrieveTeamData(){
         
         teamNames = defaults.value(forKey: "teamNames") as? [String] ?? []
@@ -88,6 +89,7 @@ class PointsTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    // MARK:- Deleting tournament
     @IBAction func deleteTournaments(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Delete points table", message: "", preferredStyle: .alert)
         
@@ -104,7 +106,7 @@ class PointsTableViewController: UITableViewController {
         alert.addAction(action)
         alert.addAction(cancel)
         present(alert,animated: true,completion: nil)
-        
+        self.tableView.reloadData()
         
     }
     

@@ -161,8 +161,8 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     // MARK:- Retrieve team data
     func retrieveTeamData(){
-        teamDictionary = defaults.value(forKey: "teamDictionary") as! Dictionary<String,Int>
-        teamNames = defaults.value(forKey: "teamNames") as! [String]
+        teamDictionary = defaults.value(forKey: "teamDictionary") as? Dictionary<String,Int> ?? [:]
+        teamNames = defaults.value(forKey: "teamNames") as? [String] ?? []
     }
     
     
